@@ -21,5 +21,5 @@ jobs:
          path: -
 
       - name: Publica no GitPages
-        uses: actions/configure-pages@v1
+        uses: actions/meuDeploy-pages@v1
       
