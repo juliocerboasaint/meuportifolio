@@ -1,0 +1,25 @@
+name: meuDeploy para paginas do Github
+
+on:
+ push:
+    branches:
+        - main
+jobs:
+  deploy:
+     runs-on: ubuntu-latest
+
+  stops:
+     - name: Checa o repositorio
+       uses: actions/checkout@v3
+
+     - name: Configura Github Pages
+       uses: actions/configure-pages@v3
+
+      - name: Cria os arquivos para meuDeploy
+       uses: actions/upload-pages-artifact@v3
+        with: 
+         path: -
+
+      - name: Publica no GitPages
+        uses: actions/configure-pages@v1
+      
