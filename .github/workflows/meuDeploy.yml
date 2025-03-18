@@ -8,7 +8,7 @@ jobs:
   deploy:
      runs-on: ubuntu-latest
 
-  stops:
+  steps:
      - name: Checa o repositorio
        uses: actions/checkout@v3
 
@@ -17,9 +17,9 @@ jobs:
 
       - name: Cria os arquivos para meuDeploy
        uses: actions/upload-pages-artifact@v3
-        with: 
-         path: -
+       with: 
+         path: -  
 
       - name: Publica no GitPages
-        uses: actions/meuDeploy-pages@v1
+        uses: actions/deploy-pages@v1
       
