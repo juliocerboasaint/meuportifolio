@@ -5,16 +5,16 @@ on:
     branches:
         - main
     
-    permissions: 
-    contents: write
-    pages: write
-    id-token: write
+permissions: 
+   contents: write
+   pages: write
+   id-token: write
     
 jobs:
   deploy:
      runs-on: ubuntu-latest
 
-  steps:
+     steps:
      - name: Checkout do repositorio
        uses: actions/checkout@v4
 
@@ -24,8 +24,8 @@ jobs:
      - name: Criar artefatos para meuDeploy
        uses: actions/upload-pages-artifact@v3
        with: 
-         path: -
+         path: .
 
-      - name: Publica no GitPages
-        uses: actions/deploy-pages@v4
+     - name: Publicar no Git Hub Pages
+       uses: actions/deploy-pages@v4 
       
